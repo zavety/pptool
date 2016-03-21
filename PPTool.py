@@ -16,9 +16,11 @@ def pptool(pptPath):
         themePath = pyPath + r'\Origin.thmx'
         work.ApplyTheme(themePath)
         work.Save()
+        return True
     except Exception as e:
         print themePath
         print e
+        return False
     finally:
         p.Quit()
 
