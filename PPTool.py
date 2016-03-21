@@ -14,8 +14,7 @@ def pptool(pptPath):
         pageCount = work.Slides.Count
         pyPath = os.sys.path[0]
         themePath = pyPath + r'\Origin.thmx'
-        for i in range(0,pageCount):
-            work.Slides[i].ApplyTheme(themePath)
+        work.ApplyTheme(themePath)
         work.Save()
     except Exception as e:
         print themePath
